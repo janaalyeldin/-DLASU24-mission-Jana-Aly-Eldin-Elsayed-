@@ -108,4 +108,21 @@ The main challenge encountered with this model was the unexpected high RAM usage
 **Summary:**
 The CNN-LSTM model demonstrated impressive speed and efficiency. The addition of the `c_x` memory parameter enhanced its ability to manage temporal information. Running on a GPU with a reduced batch size led to optimal performance, making this the fastest model I’ve developed.
 
+## Additional Notes: Low-Dimensionality Representation of the Data
+
+**Research Findings:**  
+After extensive research, I discovered several methods for representing the data, including PCA (Principal Component Analysis) and LDA (Linear Discriminant Analysis), among others.
+
+**PCA:**  
+PCA seemed to be more appropriate for both tabular and sequential data. This method reduces the dimensionality of the data while preserving as much variance as possible, making it versatile for different types of datasets.
+
+**LDA:**  
+LDA, on the other hand, appeared to work effectively only for tabular data. LDA focuses on maximizing the separability among known categories, which might explain why it is better suited for tabular data.
+
+**Uncertainty:**  
+While these findings are based on my research and experimentation, I am not entirely certain about the correctness of these observations and would recommend further validation.
+
+**Conclusion:**  
+Choosing between PCA and LDA depends on the nature of the data. PCA offers a more general solution applicable to various data types, while LDA might be better for specific cases involving tabular data.
+
 
